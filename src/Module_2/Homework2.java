@@ -12,6 +12,7 @@ public class Homework2 {
         System.out.println("Введите возраст");
         int age =scanner.nextInt();
         System.out.println("Введите хобби");
+        scanner.nextLine();
         String hobby = scanner.nextLine();
         System.out.println();
         System.out.println("Имя:    " + name);
