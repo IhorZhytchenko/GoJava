@@ -38,6 +38,23 @@ public class Task_1_2 {
         for(int value : arr) {
             System.out.print(value + " ");
         }
+        System.out.println();
+        // Task 2
+
+        int [] arrRepeat = new int [arr.length];
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j< arr.length; j++){
+                if (arr[i] == arr[j]) arrRepeat[i]++;
+            }
+        }
+        int minRepeat = arrRepeat[0];
+        int maxRepeat = arrRepeat[0];
+        for (int i = 0; i < arrRepeat.length; i++){
+            if (minRepeat > arrRepeat[i]) minRepeat = arrRepeat[i];
+            if (maxRepeat < arrRepeat[i]) maxRepeat = arrRepeat[i];
+        }
+        System.out.println("Максимальное количество повторений чисел в массиве - " + maxRepeat);
+        System.out.println("Минимальное количество повторений чисел в массиве - " + minRepeat);
 
     }
 
