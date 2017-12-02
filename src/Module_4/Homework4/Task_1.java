@@ -5,7 +5,7 @@ public class Task_1 {
 
     }
 
-    static void numbers (int x){
+    static void Counting (int x){
         for (int i=1; i<=x;i++) System.out.println(i);
     }
 }
