@@ -18,6 +18,13 @@ public class Task_4 {
             return a;
         }
     }
+    static float getMax(float a,float b) {
+        if (a < b) {
+            return b;
+        } else {
+            return a;
+        }
+    }
     static double getMax(int a,double b) {
         if (a < b) {
             return b;
