@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Task_7 {
     static  Scanner scanner = new Scanner(System.in);
+    static boolean rec = false;
 
     public static void main(String[] args) {
         do {
@@ -23,12 +24,12 @@ public class Task_7 {
                     System.out.println(getMax());
                     break;
                 case 5 :
-                    System.out.println("Введите число х:");
-                    CountingRecursion(scanner.nextInt());
+                    CountingRecursion(1);
+                    rec = false;
                     break;
                 case 6:
-                    System.out.println("Введите ширину и высоту прямоугольника:");
-                    drawRectangleRecursion(scanner.nextInt(),scanner.nextInt());
+                    drawRectangleRecursion(1,1);
+                    rec = false;
                     break;
                 default:
                     System.out.println("Не коректный ввод номера задачи");
@@ -82,6 +83,12 @@ public class Task_7 {
 
     //Task 5
     static void CountingRecursion (int x){
+        if (!rec){
+            System.out.println("Введите число х:");
+            rec = true;
+            CountingRecursion(scanner.nextInt());
+            return;
+        }
         if (x==1){
             System.out.println(x);
         }
@@ -92,6 +99,12 @@ public class Task_7 {
     }
     //Task 6
     static void drawRectangleRecursion (int a, int b){
+        if (!rec){
+            System.out.println("Введите ширину и высоту прямоугольника:");
+            rec = true;
+            drawRectangleRecursion(scanner.nextInt(),scanner.nextInt());
+            return;
+        }
         if (b==1){
             if (a == 1) {
                 System.out.println("+ ");
