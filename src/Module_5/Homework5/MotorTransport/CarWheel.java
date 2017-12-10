@@ -19,7 +19,7 @@ public class CarWheel {
     public double getWheelCondition(){
         return this.wheelCondition;
     }
-    public void showCondition(){
+    public void showInformation(){
         System.out.println("Состояние шины - " + this.wheelCondition*100 +"%" );
 
     }

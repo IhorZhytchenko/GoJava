@@ -42,7 +42,7 @@ public class CarDoor {
         }
     }
 
-    public void showCondition(){
+    public void showInformation(){
         String door = this.doorCondition ? "закрыта" : "открыта";
         String window = this.windowCondition ? "закрыто" : "открыто";
         System.out.println("состояние двери - " + door + ", состояние окна - " + window);
