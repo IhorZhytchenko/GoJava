@@ -20,13 +20,13 @@ public class Car {
         this.passengersCount = passengersCount;
         this.wheels = new CarWheel[]{new CarWheel(), new CarWheel(), new CarWheel(), new CarWheel()};
         this.doors = new CarDoor[]{new CarDoor(),new CarDoor(),new CarDoor(),new CarDoor()};
-        this.changeSpeed(speed);
+        this.setSpeed(speed);
     }
     public Car(String date){
         this(date,"нет данных",180,12.0,5,0,0 );
     }
 
-    public void changeSpeed(int speed){
+    public void setSpeed(int speed){
         if (passengersCount<1||wheels.length<4) {
             this.speed = 0;
         } else {
@@ -43,11 +43,11 @@ public class Car {
         if (passengersCount>0){
             passengersCount--;
         }
-       changeSpeed(speed);
+       setSpeed(speed);
     }
     public void dropAllPassengers(){
         passengersCount = 0;
-        this.changeSpeed(speed);
+        this.setSpeed(speed);
     }
     public CarDoor getDoor(int index){
         return doors[index];
@@ -58,7 +58,7 @@ public class Car {
     public void removeAllWheels(){
 
         wheels = new CarWheel[0];
-        this.changeSpeed(speed);
+        this.setSpeed(speed);
     }
     public void addWheels(int x){
         int size = wheels.length + x;
@@ -89,7 +89,7 @@ public class Car {
         }
     }
     public void showCarInformation(){
-        System.out.println("Дата создания - " + date + ", тип двигателя - "
+        System.out.println("Дата производства - " + date + ", тип двигателя - "
                 + engine + ", максимальная скорость - " + maxSpeed + ", время разгона до 100км/ч - " + acceleration);
         System.out.println("пассажировместимость - " + maxPassengers + ", кол-во пассажиров внутри -"
                 + passengersCount + ", текущая скорость - " + speed +
@@ -103,6 +103,9 @@ public class Car {
             wheels[i].showInformation();
         }
 
+    }
+    public int getWheelsLength(){
+        return this.wheels.length;
     }
     
 }
