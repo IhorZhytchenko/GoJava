@@ -4,6 +4,7 @@ import javafx.application.Application;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -33,6 +34,12 @@ public class Snowman extends Application {
     void windowSetup(Stage primaryStage) {
         primaryStage.setWidth(WINDOW_WIDTH);
         primaryStage.setHeight(WINDOW_HEIGHT);
+
+        primaryStage.setMaxWidth(WINDOW_WIDTH);
+        primaryStage.setMaxHeight(WINDOW_HEIGHT);
+
+        primaryStage.setMinWidth(WINDOW_WIDTH);
+        primaryStage.setMinHeight(WINDOW_HEIGHT);
     }
     void drawUI(Pane root, Pane circlesRoot) {
         Text text1 = new Text("number of circles:");
@@ -155,8 +162,14 @@ public class Snowman extends Application {
         Pane root = new Pane();
         Pane circlesRoot = new Pane();
         root.getChildren().addAll(circlesRoot);
-        drawUI(root,circlesRoot);
         windowSetup(primaryStage);
+        ScrollPane sp = new ScrollPane();
+        sp.setContent(circlesRoot);
+        sp.setPrefSize(980,660);
+        sp.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        sp.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        root.getChildren().addAll(sp);
+        drawUI(root,circlesRoot);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
