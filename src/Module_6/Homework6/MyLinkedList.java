@@ -20,7 +20,6 @@ public class MyLinkedList<T> {
     }
     public void remove(int index){
         Node<T> x = node(index);
-        final T element = x.item;
         final Node<T> next = x.next;
         final Node<T> prev = x.prev;
 
@@ -64,6 +63,7 @@ public class MyLinkedList<T> {
 
 
     private   Node<T> node(int index) {
+        if((index<0)||(index>=size)) return null;
         if (index < (size /2)) {
             Node<T> x = first;
             for (int i = 0; i < index; i++)
