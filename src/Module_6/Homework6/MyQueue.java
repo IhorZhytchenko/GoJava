@@ -7,8 +7,8 @@ public class MyQueue<T> {
 
 
     public void add(T value){
-        Node<T> l = last;
-        Node<T> newNode = new Node<>(l, value, null);
+        final Node<T> l = last;
+        final Node<T> newNode = new Node<>(l, value, null);
         last = newNode;
         if (l == null)
             first = newNode;
@@ -67,6 +67,7 @@ public class MyQueue<T> {
 
 
     private   Node<T> node(int index) {
+        if((index<0)||(index>=size)) return null;
         if (index < (size /2)) {
             Node<T> x = first;
             for (int i = 0; i < index; i++)
