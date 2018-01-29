@@ -1,0 +1,41 @@
+{
+"fruits": [{
+
+   "type": "Banana",
+
+   "shelfLife": 20,
+
+   "date": "25/01/2018",
+
+   "price": 100
+
+  },
+
+  {
+
+   "type": "Apple",
+
+   "shelfLife": 10,
+
+
+"date": "25/01/2018",
+
+   "price": 70
+
+  },
+
+     {
+
+      "type": "Apricot",
+
+      "shelfLife": 10,
+
+   "date": "24/01/2018",
+
+      "price": 123
+
+     }
+
+ ]
+
+}

@@ -1,0 +1,55 @@
+{
+
+ "fruits": [{
+
+   "type": "Orange",
+
+   "shelfLife": 12,
+
+   "date": "24/01/2018",
+
+   "price": 45
+
+  },
+
+  {
+
+   "type": "Apple",
+
+   "shelfLife": 13,
+
+"date": "24/01/2018",
+
+   "price": 70
+
+  }
+  ,
+
+    {
+
+     "type": "Melon",
+
+     "shelfLife": 18,
+
+  "date": "25/01/2018",
+
+     "price": 200
+
+    }
+    ,
+
+        {
+
+         "type": "Lime",
+
+         "shelfLife": 22,
+
+      "date": "25/01/2018",
+
+         "price": 250
+
+        }
+
+ ]
+
+}
