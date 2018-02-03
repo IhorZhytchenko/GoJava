@@ -15,7 +15,13 @@ public class Company {
     private int moneyBalance;
     private List<TradeShop> shops = new ArrayList<>();
 
+    public Company(int moneyBalance, List<TradeShop> shops) {
+        this.moneyBalance = moneyBalance;
+        this.shops = shops;
+    }
+
     public void save(String pathToJsonFile){
+        moneyBalance = getCompanyBalance();
         String json = JSON.toJSONString(this);
         try(FileWriter writer = new FileWriter(pathToJsonFile)) {
             writer.write(json);
@@ -93,6 +99,7 @@ public class Company {
     }
 
     public int getMoneyBalance() {
+        moneyBalance = getCompanyBalance();
         return moneyBalance;
     }
 
